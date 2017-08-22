@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery-3.0.0.js"></script>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	 ul li{
+		 list-style:none
+	 }
+	.focus{
+		position: relative;
+		width:100%;
+		height:400px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	.focus .slide{
+		position:absolute;
+		width:600px;
+		height:100%;
+	}
+	.focus .slide li{
+		position:absolute;
+		display:none;
+		z-index:0
+	}
+	.focus .slide li img{
+		width:100%
+	}
+	.focus .slide .picone{
+		display:block;
+		width:100px;
+		left:0;
+		top:60px;
+		z-index:1;
+	}
+	.focus .slide .pictwo{
+		display:block;
+		width:150px;
+		left:15%;
+		top:40px;
+		z-index:2;
+	}
+	.focus .slide .picthree{
+		display:block;
+		width:200px;
+		left:35%;
+		top:20px;
+		z-index:3
+	}
+	.focus .slide .picfour{
+		display:block;
+		width:150px;
+		right:15%;
+		top:40px;
+		z-index:2
+	}
+	.focus .slide .picfive{
+		display:block;
+		width:100px;
+		right:0;
+		top:60px;
+		z-index:1
+	}
+	.focus .prev{
+		position:absolute;
+		left:50%;
+		margin-left:120px;
+		top:140px;
+		z-index:999;
+		cursor:pointer;
+	}
+	.focus .next{
+		position:absolute;
+		left:50%;
+		margin-left:-150px;
+		top:140px;
+		z-index:999;
+		cursor:pointer;
+	}
+</style>
+</head>
+<body>
+<div class="focus">
+	<ul class="slide">
+		<li class="picone"><img src="img/picone.png"></li>
+		<li class="pictwo"><img src="img/pictwo.png"></li>
+		<li class="picthree"><img src="img/picthree.png"></li>
+		<li class="picfour"><img src="img/picfour.png"></li>
+		<li class="picfive"><img src="img/picfive.png"></li>
+	</ul>
+	<div class="prev">
+		<img src="img/prev.png">
+	</div>
+	<div class="next">
+		<img src="img/next.png">
+	</div>
+</div>
+<script type="text/javascript" src="jquery.round.js"></script>
+<script>
+	$('.focus').Focus({
+		'autoTime':'2000'
+	});
+</script>
+</body>
+</html>
